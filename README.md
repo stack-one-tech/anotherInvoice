@@ -12,6 +12,8 @@ Invoicing has never been this easy. With our simple, yet powerful invoicing serv
 
 [Laravel](https://laravel.com) is accessible, powerful, and provides tools required for large, robust applications.
 
+The Main PDF generation is done by the nice Golang PDF Invoice Generator [https://github.com/TheFpiasta/SimpleInvoice](https://github.com/TheFpiasta/SimpleInvoice)
+
 ## Contributing
 
 Thank you for considering contributing to the App. You can drop me a line at [hello@stack-one.tech](mailto:hello@stack-one.tech) or open a pull request.
