@@ -15,16 +15,25 @@
                 <div class="row">
                     <div class="col col-12 col-md-6">
                         <div class="form-group">
+                            <label for="customerNumbr">Kundennummer</label>
+                            <input type="text" class="form-control" id="customerNumbr" name="fullForename" wire:model="new_companyInfo.customerNumbr">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" name="companyName" wire:model="new_companyInfo.companyName">
+                        </div>
+                        <div class="form-group">
                             <label for="fullForename">Forename</label>
                             <input type="text" class="form-control" id="fullForename" name="fullForename" wire:model="new_companyInfo.fullForename">
                         </div>
                         <div class="form-group">
                             <label for="fullSurname">Surname</label>
                             <input type="text" class="form-control" id="fullSurname" name="fullSurname" wire:model="new_companyInfo.fullSurname">
-                        </div>
-                        <div class="form-group">
-                            <label for="companyName">Company Name</label>
-                            <input type="text" class="form-control" id="companyName" name="companyName" wire:model="new_companyInfo.companyName">
                         </div>
                         <div class="form-group">
                             <label for="supplement">Supplement</label>

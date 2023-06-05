@@ -10,6 +10,7 @@ class CompanyInfo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'customerNumbr',
         'fullForename',
         'fullSurname',
         'companyName',

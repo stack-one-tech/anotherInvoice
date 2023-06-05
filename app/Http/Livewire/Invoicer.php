@@ -43,6 +43,7 @@ class Invoicer extends Component
         ];
 
         $this->new_companyInfo = [
+            "customerNumbr" => 'KD' . $this->getCustomerNumber() + 1,
             "fullForename" => 'Johann',
             "fullSurname" => 'Schmidt',
             "companyName" => 'Schmidt GmbH',
@@ -86,6 +87,20 @@ class Invoicer extends Component
     {
         Product::find($p_id)->delete();
         $this->productList = Product::all();
+    }
+
+    private function getCustomerNumber()
+    {
+        $invoices = CompanyInfo::all();
+        // map the invoice numbers to their numeric portion
+        $numbers = $invoices->map(fn($invoice) => intval(substr($invoice->customerNumbr, 2)))
+            ->sortByDesc(fn($number) => $number);
+        if ($numbers->isEmpty()) {
+            return null;
+        }
+        // convert the biggest number back to a string and prepend the prefix
+        return $numbers->first();
+
     }
 
     public function saveProduct()

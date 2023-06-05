@@ -14,7 +14,7 @@ class Settings extends Component
 
     public function mount()
     {
-        $this->myCompanyName = CompanyInfo::find(Auth::user()->company_id)->companyName;
+            $this->myCompanyName = CompanyInfo::find(Auth::user()->company_id)?->companyName;
     }
 
     public function render()

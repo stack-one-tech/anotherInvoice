@@ -50,7 +50,7 @@ class CreateInvoice extends Component
             "openingText" => "Sehr geehrte Damen und Herren,\n hiermit stellen wir Ihnen die Rechnung für unsere Leistungenaus.",
             "closingText" => "Wir danken für Ihr Vertrauen und freuen uns auf eine weitere Zusammenarbeit.\n Mit freundlichen Grüßen,\n Maria Musterfrau",
             "paymentTerms" => "zahlbar innerhalb von 14 Tagen ohne Abzug.",
-            "invoice_items" => "[{\"product_id\":9,\"qty\":44.6}]",
+            "invoice_items" => "[]",
             "ustNotice" => "",
         ];
 
@@ -175,7 +175,7 @@ class CreateInvoice extends Component
             'web' => $this->sender->web,
             'email' => $this->sender->email,
             'mimeLogoUrl' => $this->sender->mimeLogoUrl,
-            'mimeLogoScale' => 0.25,
+            'mimeLogoScale' => floatval($this->sender->mimeLogoScale),
             'iban' => $this->sender->iban,
             'bic' => $this->sender->bic,
             'taxNumber' => $this->sender->taxNumber,
